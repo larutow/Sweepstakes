@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Sweepstakes
 {
     class Sweepstakes
     {
         private Dictionary<int, Contestant> contestants;
+        private static Random rng;
         private string name;
         public string Name
         {
@@ -26,20 +28,26 @@ namespace Sweepstakes
         {
             Name = name;
         }
+        static Sweepstakes()
+        {
+            rng = new Random();
+        }
 
         public void RegisterContestant(Contestant contestant)
         {
-
+            contestants.Add(contestant.RegistrationNumber, contestant);
         }
 
         public Contestant PickWinner()
         {
-            return null;
+            int winnerIDindex = rng.Next(contestants.Count);
+            return contestants.ElementAt(winnerIDindex).Value;
+
         }
 
         public void PrintContestsantInfo(Contestant contestant)
         {
-
+            
         }
     }
 }

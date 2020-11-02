@@ -16,5 +16,10 @@ namespace Sweepstakes
 
             return answer;
         }
+
+        public static void Display(string value)
+        {
+            Console.WriteLine(value);
+        }
     }
 }
