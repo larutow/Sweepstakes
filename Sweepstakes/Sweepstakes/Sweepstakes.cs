@@ -27,6 +27,7 @@ namespace Sweepstakes
         public Sweepstakes(string name)
         {
             Name = name;
+            contestants = new Dictionary<int, Contestant>();
         }
         static Sweepstakes()
         {
