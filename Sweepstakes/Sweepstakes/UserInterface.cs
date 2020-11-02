@@ -11,7 +11,8 @@ namespace Sweepstakes
     {
         public static string GetUSerInputFor(string prompt)
         {
-            string answer = null;
+            Console.WriteLine(prompt);
+            string answer = Console.ReadLine();
 
             return answer;
         }
