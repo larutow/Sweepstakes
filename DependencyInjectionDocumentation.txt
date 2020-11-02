@@ -1,0 +1,9 @@
+[Where-used]
+Dependency injection is used as "constructor injection" on line 15 of MarketingFirm.cs
+	
+	public MarketingFirm(ISweepstakesManager manager){...}
+
+[Benefits]
+Because marketingfirm has a ISweepstakesManager object _manager which is defined by the constructor, we can use shared functionality of the ISweepstakesManager interface (particularly the InsertSweepstakes method) inside the CreateSweepstake method in this class.
+
+Using dependency injection here means that we can instantiate the _manager object as *any* ISweepstakesManager implemented object allowing us as developers to be flexible in logic used for the necessary methods (again in this case InsertSweepstakes is the only method necessary)
