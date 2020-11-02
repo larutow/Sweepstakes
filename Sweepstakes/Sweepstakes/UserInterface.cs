@@ -9,7 +9,7 @@ namespace Sweepstakes
 {
     public static class UserInterface
     {
-        public static string GetUSerInputFor(string prompt)
+        public static string GetUserInputFor(string prompt)
         {
             Console.WriteLine(prompt);
             string answer = Console.ReadLine();
@@ -21,5 +21,6 @@ namespace Sweepstakes
         {
             Console.WriteLine(value);
         }
+
     }
 }
