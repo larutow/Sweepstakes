@@ -24,7 +24,7 @@ namespace Sweepstakes
 
         public Sweepstakes(string name)
         {
-
+            Name = name;
         }
 
         public void RegisterContestant(Contestant contestant)
