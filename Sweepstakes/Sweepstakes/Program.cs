@@ -14,12 +14,13 @@ namespace Sweepstakes
             //newSim.CreateMarketingFirmWithManager();
             //Console.ReadLine();
 
+            //created 3 fake giveaways in firm
             MarketingFirm testFirm = new MarketingFirm(new SweepstakesQueueManager());
             for(int i = 0; i < 3; i++)
             {
                 testFirm.CreateSweepstake();
             }
-
+         
         }
     }
 }
