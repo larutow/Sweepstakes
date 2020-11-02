@@ -40,6 +40,7 @@ namespace Sweepstakes
 
         public Contestant PickWinner()
         {
+            //picks a random value from dictionary via the ElementAt method 
             int winnerIDindex = rng.Next(contestants.Count);
             return contestants.ElementAt(winnerIDindex).Value;
 
@@ -47,7 +48,9 @@ namespace Sweepstakes
 
         public void PrintContestsantInfo(Contestant contestant)
         {
-            
+            Console.WriteLine($"Contestant name: {contestant.FirstName} {contestant.LastName}");
+            Console.WriteLine($"Contestant email: {contestant.EmailAddress}");
+            Console.WriteLine($"Contestant registration number: {contestant.RegistrationNumber}");
         }
     }
 }

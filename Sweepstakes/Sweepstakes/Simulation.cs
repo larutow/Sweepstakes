@@ -16,18 +16,18 @@ namespace Sweepstakes
 
         public void CreateMarketingFirmWithManager()
         {
-            string managerTypeString = UserInterface.GetUSerInputFor("Choose manager type: Stack or Queue");
-            MarketingFirm newFirm;
-            switch (managerTypeString)
-            {
-                case "stack":
-                    newFirm = new MarketingFirm(new SweepstakesStackManager());
-                    break;
-                case "queue":
-                    newFirm = new MarketingFirm(new SweepstakesQueueManager());
-                    break;
-            }
+            ManagerTypeFactory managerFactory = new ManagerTypeFactory();
+
+            //prompt for manager type (stack or queue)
+            string managerTypeString = UserInterface.GetUSerInputFor("Choose manager type: stack or queue");
+
+            //generate a managerType 
+            ISweepstakesManager sweepstakesManagertype = managerFactory.GetManagerType(managerTypeString);
+
+            //generate a firm with thatmanager type
+            MarketingFirm firm = new MarketingFirm(sweepstakesManagertype);  
             
+
         }
     }
 }
