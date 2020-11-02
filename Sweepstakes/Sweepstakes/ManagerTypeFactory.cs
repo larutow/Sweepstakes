@@ -16,7 +16,6 @@ namespace Sweepstakes
         public ISweepstakesManager GetManagerType(string stringinput)
         {
        
-            MarketingFirm firm;
             ISweepstakesManager managerType = null;
             switch (stringinput)
             {
