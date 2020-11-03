@@ -24,19 +24,20 @@ namespace Sweepstakes
             tester1.FirstName = "test";
             tester1.LastName = "1";
             tester1.RegistrationNumber = 1;
-            tester1.EmailAddress = null; // fill in with temp email
+            tester1.EmailAddress = "mr5ljh+2sxtys0j3b0a4bun5j4ad9lrts@sharklasers.com"; // fill in with temp email
 
             Contestant tester2 = new Contestant();
             tester2.FirstName = "test";
             tester2.LastName = "2";
             tester2.RegistrationNumber = 2;
-            tester2.EmailAddress = null; // fill in with temp email
-            
+            tester2.EmailAddress = "mr6251+1w91rtjo67k4hwq8krtql3qfxg@sharklasers.com"; // fill in with temp email
+
+
             Contestant tester3 = new Contestant();
             tester3.FirstName = "test";
             tester3.LastName = "3";
             tester3.RegistrationNumber = 3;
-            tester3.EmailAddress = null; // fill in with temp email
+            tester3.EmailAddress = "mr625b+5801dvti2jq0rpfgm3qy9t3bc0@sharklasers.com"; // fill in with temp email
 
             testSweepstakes.RegisterContestant(tester1);
             testSweepstakes.RegisterContestant(tester2);
